@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:handler name="init" 	value="{!this}" 		action="{!c.calculateCounters}" />
+    <aura:handler name="change" value="{!v.data}" 	action="{!c.calculateCounters}" />
+                  
+    <aura:attribute name="data" type="Object[]" />
+    
+    <aura:attribute name="counters" type="Object[]" access="private" />
+    
+    <ul>
+        <aura:iteration items="{!v.counters}" var="counter">
+        	<li>{!counter.group} = {!counter.count}</li>
+        </aura:iteration>
+    </ul>
+</aura:component>

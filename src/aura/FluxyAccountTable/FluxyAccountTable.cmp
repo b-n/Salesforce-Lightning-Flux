@@ -1,0 +1,22 @@
+<aura:component >
+    
+    <aura:attribute name="accounts" type="Object[]" />
+    <aura:attribute name="config"	type="Object[]" />
+    
+    <table>
+        <thead>
+        	<tr>
+                <aura:iteration items="{!v.config}" var="config">
+                    <th>{!config.label}</th>
+                </aura:iteration>
+            </tr>
+        </thead>
+       	<tbody>
+        	<aura:iteration items="{!v.accounts}" var="account" >
+            	<tr>
+                    <c:FluxyTableRow account="{!account}" config="{!v.config}" />
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

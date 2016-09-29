@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="Fluxy event">
+    <aura:attribute name="recordId"		type="String" />
+    <aura:attribute name="fieldName" 	type="String" />
+    <aura:attribute name="fieldValue"	type="Object" />
+</aura:event>

@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:registerEvent name="ValueUpdate" type="c:FluxyEvent" />
+    
+    <aura:attribute name="account"  type="Object" />
+    <aura:attribute name="config"	type="Object[]" />
+        
+    <td>
+        <ui:inputText aura:id="Name" updateOn="keyup" keyup="{!c.valueUpdate}" />
+    </td>
+    <td>
+        <ui:inputText aura:id="Rating" updateOn="keyup" keyup="{!c.valueUpdate}" />
+    </td>
+</aura:component>
